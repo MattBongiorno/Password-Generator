@@ -16,6 +16,11 @@ function writePassword() {
     passwordText.value = password;
 
 }
+// Password parameter element arrays
+const lowerLetters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const numbers = '0123456789'.split('');
+const specialChars = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~".split('');
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
