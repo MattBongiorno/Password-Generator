@@ -22,5 +22,29 @@ const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const numbers = '0123456789'.split('');
 const specialChars = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~".split('');
 
+// Initialize password character array
+let passChoices = [];
+
+// Initialize array for generated password
+let passBuilder = [];
+
+// Obtain length from form
+let pswdLength = parseInt(lengthBox.value);
+
+// Add password characters to password array
+if (lowerBox.checked) {
+    passChoices = passChoices.concat(lowerLetters);
+}
+if (upperBox.checked) {
+    passChoices = passChoices.concat(upperLetters);
+}
+if (numbersBox.checked) {
+    passChoices = passChoices.concat(numbers);
+}
+if (specialCharBox.checked) {
+    passChoices = passChoices.concat(specialChars);
+}
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
